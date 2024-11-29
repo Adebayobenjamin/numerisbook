@@ -1,0 +1,35 @@
+version: "3.3"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: invoice_service
+    volumes:
+      - ./:/app
+    env_file:
+          - .env
+    ports:
+      - "80:80"
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: sphinx
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  # cache:
+  #   image: redis:6.2-alpine
+  #   restart: always
+  #   ports:
+  #     - "6379:6379"
+  #   command: redis-server --save 20 1 --loglevel warning
+  #   volumes:
+  #     - cache:/data
+volumes:
+  db:
+    driver: local
+  cache:
+    driver: local

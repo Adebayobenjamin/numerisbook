@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "*",
+    ".env"
+  ],
+  "ext": "go",
+  "exec": "export GO_ENV=development && go run ./cmd/api",
+  "signal": "SIGTERM"
+}
