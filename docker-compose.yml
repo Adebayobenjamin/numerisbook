@@ -14,8 +14,8 @@ services:
   db:
     image: mysql
     environment:
-      MYSQL_DATABASE: sphinx
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: numeris_book
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./data/mysql:/var/lib/mysql
     ports:
