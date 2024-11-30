@@ -132,15 +132,7 @@ Full API documentation is available here: https://documenter.getpostman.com/view
    - In-memory caching for frequently accessed data
 
 2. **Async Processing**
-   - Background job processing
-   - Event-driven architecture
-   - Message queues for heavy operations
-
-3. **Horizontal Scaling**
-   - Stateless design
-   - Load balancing
-   - Database replication
-   - Microservices architecture ready
+   - Background job processing and message queues for heavy operations
 
 ### Monitoring and Logging
 - Structured logging with zerolog
